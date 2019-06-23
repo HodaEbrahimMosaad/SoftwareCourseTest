@@ -1,0 +1,1000 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script>
+        function postContactToGoogle() {
+
+
+
+            var yourName = $('#yourName').val();
+            var phone = $('#phone').val();
+
+            if (yourName == '' || phone == '') {
+                return;
+            }
+            var gender = $('#gender').is(':checked');
+
+
+            // alert($('#nopp').is(":hidden"));
+
+
+
+            var rate_value = document.querySelector('input[name="radio"]:checked').value;
+
+            var rate_value1 = document.querySelector('input[name="radio1"]:checked').value;
+
+            var rate_value2 = document.querySelector('input[name="radio2"]:checked').value;
+
+            var rate_value3 = document.querySelector('input[name="radio3"]:checked').value;
+
+            var rate_value4 = document.querySelector('input[name="radio4"]:checked').value;
+
+            var rate_value5 = document.querySelector('input[name="radio5"]:checked').value;
+
+            var rate_value6 = document.querySelector('input[name="radio6"]:checked').value;
+
+            var rate_value7 = document.querySelector('input[name="radio7"]:checked').value;
+
+            var rate_value8 = document.querySelector('input[name="radio8"]:checked').value;
+
+            var rate_value9 = document.querySelector('input[name="radio9"]:checked').value;
+
+            var rate_value11 = document.querySelector('input[name="weeb"]:checked').value;
+
+            var rate_value22 = document.querySelector('input[name="weeb1"]:checked').value;
+
+
+            var rate_value33 = document.querySelector('input[name="weeb2"]:checked').value;
+
+
+            var rate_value44 = document.querySelector('input[name="weeb3"]:checked').value;
+
+
+            var rate_value55 = document.querySelector('input[name="weeb4"]:checked').value;
+
+            var rate_value66 = document.querySelector('input[name="weeb5"]:checked').value;
+
+
+            var rate_value77 = document.querySelector('input[name="weeb6"]:checked').value;
+
+
+            var rate_value88 = document.querySelector('input[name="weeb7"]:checked').value;
+            
+            var java1 = document.querySelector('input[name="java"]:checked').value;
+            
+            var java2 = document.querySelector('input[name="java1"]:checked').value;
+            
+            var java3 = document.querySelector('input[name="java2"]:checked').value;
+            
+            var java4 = document.querySelector('input[name="java3"]:checked').value;
+            
+            var java5 = document.querySelector('input[name="java4"]:checked').value;
+
+            var rate_value99 = $('#q1').val();
+            var rate_value12 = $('#q2').val();
+            var rate_value13 = $('#q3').val();
+            var rate_value14 = $('#q4').val();
+            var rate_value15 = $('#q5').val();
+            var rate_value16 = $('#q6').val();
+            var rate_value17 = $('#q7').val();
+
+
+            var jj1 = $('#j1').val();
+            var jj2 = $('#j2').val();
+            var jj3 = $('#j3').val();
+            var jj4 = $('#j4').val();
+            var comment = $("#comment").val();
+
+            /*****************************/
+
+
+
+            $.ajax({
+                url: "https://docs.google.com/forms/d/e/1FAIpQLScy3sLg23KfKDcChy5VXDXSWqIdSKKiYIwFaLcqxzTd5oBA3Q/formResponse",
+                data: {
+                    "entry_8963868": yourName,
+                    "entry_2101181053": phone,
+                    "entry_1708670526": gender,
+                    "entry_46667602": rate_value,
+                    "entry_261713867": rate_value1,
+                    "entry_461443204": rate_value2,
+                    "entry_482421979": rate_value3,
+                    "entry_1681268109": rate_value4,
+                    "entry_1461506645": rate_value5,
+                    "entry_2054547298": rate_value6,
+                    "entry_1312205150": rate_value7,
+                    "entry_826103986": rate_value8,
+                    "entry_989028738": rate_value9,
+
+                    "entry_260729500": rate_value11,
+                    "entry_1308060605": rate_value22,
+                    "entry_666245753": rate_value33,
+                    "entry_1507025856": rate_value44,
+                    "entry_1484383779": rate_value55,
+                    "entry_1461060659": rate_value66,
+                    "entry_1027166871": rate_value77,
+                    "entry_891004996": rate_value88,
+
+
+                    "entry_2036741028": rate_value99,
+                    "entry_119744286": rate_value12,
+                    "entry_628924265": rate_value13,
+                    "entry_1242364462": rate_value14,
+                    "entry_1791415998": rate_value15,
+                    "entry_1465734875": rate_value16,
+                    "entry_232515873": rate_value17,
+                    
+                    
+                    "entry_1920735756": java1,
+                    "entry_763134559": java2,
+                    "entry_125165823": java3,
+                    "entry_681303838": java4,
+                    "entry_1285857875": java5,
+                    
+                    "entry_965612354": jj1,
+                    "entry_1843491822": jj2,
+                    "entry_2025023017": jj3,
+                    "entry_1470822629": jj4,
+                    
+                    "entry_1237092217": comment,
+
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function() {
+                        window.location.replace("thankyou.html");
+                    },
+                    200: function() {
+                        window.location.replace("thankyou.html");
+                    }
+                }
+            });
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <nav class="social">
+        <ul>
+            <li><a href="https://www.youtube.com/channel/UCkMb8YBXcVQFYYtPs7-fXow">Youtube <img class="icon" src="Social-Media-logo/you%20tube.jpg"></a></li>
+            <li><a href="https://www.facebook.com/AlAZharEXhibition/?fref=ts">Facebook <img class="icon" src="Social-Media-logo/facebook.jpg"></a></li>
+            <li><a href="https://www.instagram.com/alazhar.exhibition/">Instagram <img class="icon" src="Social-Media-logo/Enstgram.jpg"></a></li>
+            <li><a href="https://twitter.com/AZhar_EXhibtion">Twitter <img class="icon" src="Social-Media-logo/Twitter.jpg"></a></li>
+
+        </ul>
+    </nav>
+
+
+    <section>
+
+        <div class="fSec seven">
+            <img src="2.jpg" class="img1">
+            <h1 class="mz1 text-center">AZEX'18 Diplomas</h1>
+            <div class="ri1">
+                <h1 class="e1 text-center">الأهداف</h1>
+                <span class="daimond">
+
+                </span>
+                <p class="d1">- تقوية الجانب العملي لدي الطالب من خلال تنفيذ مشروع في مجالات هندسية مختلفه<br> -تمهيد الطريق للطلاب المشتركين لشق طريقهم في ذلك المجال بعد تلقيهم للأساسيات وتوجيههم الي ما يجب عليهم بعد ذلك<br> - بث روح التعاون بين الطلاب وغرس قيم العمل
+                    الجماعي<br> -تحقيق التكامل الفني الهندسي بين مجالات المشاريع حيث يتضمن تنفيذ المشروع مشاركة أكثر من مجموعه من تراكات منفصلة
+                </p>
+            </div>
+        </div>
+
+        <form id="formRequest">
+            <div class="container new seven"  id="here1">
+
+                <div class="fDiv">
+
+                    <div class="v1"> <label class="name1"> اسم : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" name="name" id="yourName" placeholder="" class="in1"> <span id='spanIn1'></span></div>
+
+
+                    <br>
+
+
+                    <div class="v1"> <label class="name2"> رقم الهاتف:&nbsp;&nbsp;</label>
+                        <input type="text" name="name" id="phone" placeholder="" class="in2" disabled><span id='spanIn2'></span></div>
+
+
+                    <br><br>
+
+                    <p class="que">النـــوع :</p>
+                    <label class="switch swM">
+                        <input class="switch-input" type="checkbox" id="gender"  />
+                        <span id="test" class="switch-label" data-on="أنثى" data-off="ذكر"></span>
+                        <span class="switch-handle"></span>
+                     </label>
+
+                    <br>
+                    <br>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="con text-center seven">
+
+                <br>
+                <p class="que">هل لديك خبرة سابقة بمجالـ (Java - Web) ؟</p>
+                <br>
+                <div class="btn-group" data-toggle="buttons">
+
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" value="yes" id="yup" autocomplete="off"> نعم
+                    </label>
+
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" value="no" id="nop" autocomplete="off"> لا
+                    </label>
+                </div>
+
+
+                <div class="yes" id="yess">
+
+                    <center>
+                        <div class="btn-group" data-toggle="buttons">
+
+                            <label class="btn btn-primary">
+                        <input type="radio" name="options" value="web" id="webb" autocomplete="off"> Web
+                    </label>
+
+                            <label class="btn btn-primary">
+                        <input type="radio" name="options" value="java" id="javaa" autocomplete="off">
+                        Java
+                    </label>
+                        </div>
+                    </center>
+
+
+
+                    <div class="testw">
+
+
+                        <p>1) We can make a radio button in HTML By:</p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb" id="web1" value="div" checked/>
+                                <label for="web1">&lt;div&gt;</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb" id="web2" value="radio" />
+                                <label for="web2">&lt;radio&gt;
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb" id="web3" value="input" />
+                                <label for="web3">&lt;input&gt;</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb" id="web4" value="span" />
+                                <label for="web4">&lt;span&gt;</label>
+                            </div>
+
+                        </div>
+
+
+                        <p>2)We can make the font weight Bold:</p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb1" id="web1.1" value="p" checked/>
+                                <label for="web1.1">&lt;p&gt;</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb1" id="web1.2" value="em" />
+                                <label for="web1.2">&lt;em&gt;
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb1" id="web1.3" value="bold" />
+                                <label for="web1.3">&lt;bold&gt;</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb1" id="web1.4" value="strong" />
+                                <label for="web1.4">&lt;strong&gt;</label>
+                            </div>
+
+                        </div>
+
+
+                        <p>3) Which of the following HTML5 elements can be used just one time:</p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb2" id="web1.11" value="article" checked/>
+                                <label for="web1.11">&lt;article&gt;</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb2" id="web1.22" value="main" />
+                                <label for="web1.22">&lt;main&gt;
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb2" id="web1.33" value="section" />
+                                <label for="web1.33">&lt;section&gt;</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb2" id="web1.44" value="div" />
+                                <label for="web1.44">&lt;div&gt;</label>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <p>4)Which of the following HTML5 elements can be used to make this
+                            <img src="Capture.PNG"> :
+                        </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb3" id="web1.21" value="bar" checked/>
+                                <label for="web1.21">&lt;bar&gt;</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb3" id="web1.32" value="progress" />
+                                <label for="web1.32">&lt;progress&gt;
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb3" id="web1.43" value="input" />
+                                <label for="web1.43">&lt;input&gt;</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb3" id="web1.54" value="detail" />
+                                <label for="web1.54">&lt;detail&gt;</label>
+                            </div>
+
+                        </div>
+
+
+                        <p>5) What is the short hand code of border?
+                        </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb4" id="eb1.21" value="Size / Type / Color" checked/>
+                                <label for="eb1.21">Size / Type / Color</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb4" id="eb1.32" value="Type / Color / Size" />
+                                <label for="eb1.32">Type / Color / Size
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb4" id="eb1.43" value="Color / Size / Type" />
+                                <label for="eb1.43">Color / Size / Type</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb4" id="eb1.54" value="Size / Color / Type" />
+                                <label for="eb1.54">Size / Color / Type</label>
+                            </div>
+
+                        </div>
+
+
+
+                        <p>6) Which event that we're going to use to make action after hovering in JS:
+
+                        </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb5" id="b1.21" value="Onload()" checked/>
+                                <label for="b1.21">Onload()</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb5" id="b1.32" value="Onkeyup()" />
+                                <label for="b1.32">Onkeyup()
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb5" id="b1.43" value="Onmouseover()" />
+                                <label for="b1.43">Onmouseover()</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb5" id="b1.54" value="Onclick()" />
+                                <label for="b1.54">Onclick()</label>
+                            </div>
+
+                        </div>
+
+
+
+                        <p>7)How to make a shadow for your element:
+
+                        </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb6" id="a1.21" value="Text-shadow" checked/>
+                                <label for="a1.21">Text-shadow</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb6" id="a1.32" value="Box-shadow" />
+                                <label for="a1.32">Box-shadow
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb6" id="a1.43" value="Element-shadow" />
+                                <label for="a1.43">Element-shadow</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb6" id="a1.54" value="Shadow" />
+                                <label for="a1.54">Shadow</label>
+                            </div>
+
+                        </div>
+
+
+                        <p>8)What do we use @keyframe for:
+
+                        </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="weeb7" id="aa1.21" value="Transition" checked/>
+                                <label for="aa1.21">Transition</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="weeb7" id="aa1.32" value="Transformation" />
+                                <label for="aa1.32">Transformation
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="weeb7" id="aa1.43" value="Animation" />
+                                <label for="aa1.43">Animation</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="weeb7" id="aa1.54" value="Framing" />
+                                <label for="aa1.54">Framing </label>
+                            </div>
+
+                        </div>
+
+
+
+                        <p>9) What does HTML stand for? </p>
+                        <input type="text" id="q1" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+
+                        <p>10)Write a CSS property to make the element at the center? </p>
+                        <input type="text" id="q2" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+                        <p>11)Write a symbol that mainly used to select a direct child: </p>
+                        <input type="text" id="q3" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+
+                        <p>12)How to make a circler shape like that:
+                            <div class="ll "></div>
+                        </p>
+                        <input type="text" id="q4" class="tst  li" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+                        <p>13)How to output something to the console in JS:</p>
+
+                        <input type="text" id="q5" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+
+                        <p>14)How to make all the characters of the string to be uppercase ?</p>
+                        <input type="text" id="q6" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+
+                        <p>15) What is the value of <img src="Capture2.PNG"></p>
+                        <input type="text" id="q7" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+
+
+                    </div>
+
+                    <div class="testj">
+                        <p>1) Java is: </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="java" id="jav1" checked value="Intermediate level programming language" />
+                                <label for="jav1">Intermediate level programming language</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="java" id="jav2" value="High level programming language " />
+                                <label for="jav2">High level programming language
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="java" id="jav3" value="Low level programming language " />
+                                <label for="jav3">Low level programming language </label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="java" id="jav4" value="Very heigh level programming language" />
+                                <label for="jav4">Very heigh level programming language </label>
+                            </div>
+
+                        </div>
+
+
+                        <p>2) Which one of these operators are logical operator : </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="java1" id="jav1.1" value="+=" checked/>
+                                <label for="jav1.1">+=</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="java1" id="jav2.2" value="=" />
+                                <label for="jav2.2">=
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="java1" id="jav3.3" value="||" />
+                                <label for="jav3.3">||</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="java1" id="jav4.4" value="*" />
+                                <label for="jav4.4">* </label>
+                            </div>
+
+                        </div>
+
+
+                        <p>3)What is the most popular programming language? </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="java2" id="jav1.11" value="Python " checked/>
+                                <label for="jav1.11">Python </label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="java2" id="jav2.22" value="=Assembly" />
+                                <label for="jav2.22">Assembly
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="java2" id="jav3.33" value="Java" />
+                                <label for="jav3.33">Java</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="java2" id="jav4.44" value="C++" />
+                                <label for="jav4.44">C++ </label>
+                            </div>
+
+                        </div>
+
+
+                        <p>4)How many statements this code will execute: </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="java3" id="av1.1" value="1" checked/>
+                                <label for="av1.1">1</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="java3" id="av2.2" value="5" />
+                                <label for="av2.2">5
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="java3" id="av3.3" value="3" />
+                                <label for="av3.3">3</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="java3" id="av4.4" value="6" />
+                                <label for="av4.4">6 </label>
+                            </div>
+
+                        </div>
+                        
+                        
+                        <p>5)Which one of this data types is a sequence: </p>
+
+                        <div class="funkyradio">
+                            <div class="funkyradio-default">
+                                <input type="radio" name="java4" id="zv1.1" value="Integer" checked/>
+                                <label for="zv1.1">Integer</label>
+                            </div>
+                            <div class="funkyradio-primary">
+                                <input type="radio" name="java4" id="zav2.2" value="String" />
+                                <label for="zv2.2">String
+            </label>
+                            </div>
+                            <div class="funkyradio-success">
+                                <input type="radio" name="java4" id="zv3.3" value="Double" />
+                                <label for="zv3.3">Double</label>
+                            </div>
+                            <div class="funkyradio-danger">
+                                <input type="radio" name="java4" id="zv4.4" value="Char" />
+                                <label for="zv4.4">Char</label>
+                            </div>
+
+                        </div>
+                        
+                        
+                        <p>7)What is the difference between :x , x[ ] , [ ]x , x[ ][ ]</p>
+                        <input type="text" id="j1" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+                        
+                        <p>7)What are the main principles of OOP languages .  </p>
+                        <input type="text" id="j2" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+                        
+                        <p>8) What does void means ? </p>
+                        <input type="text" id="j3" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+                        <p>9) Why are loops benefit ? </p>
+                        <input type="text" id="j4" class="tst" value="type code here" onfocus="if(this.value == 'type code here') { this.value = ''; }">
+
+
+
+                    </div>
+
+                </div>
+                <div class="nop" id="nopp">
+
+                    <p>1) What is computer programming?</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio" id="radio1" value="Setting the alarm on a computer" checked/>
+                            <label for="radio1">Setting the alarm on a computer</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio" id="radio2" value="Convincing the computer to never freeze" />
+                            <label for="radio2">Convincing the computer to never freeze</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio" id="radio3" value="Speeding up your computer" />
+                            <label for="radio3">Speeding up your computer</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio" id="radio4" value="Telling the computer what to do through a special set of instructions" />
+                            <label for="radio4">Telling the computer what to do through a special set of instructions</label>
+                        </div>
+
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+                    <p>2) how many bits in one byte?</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio1" id="radio11" value="12" checked/>
+                            <label for="radio11">12</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio1" id="radio22" value="8" />
+                            <label for="radio22">8</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio1" id="radio33" value="16" />
+                            <label for="radio33">16</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio1" id="radio44" value="32" />
+                            <label for="radio44">32</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+
+
+                    <p>3) List the following in order from simplest to most complex:  A) Function; B) Program; C) Step;</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio2" id="radio1.1" value="ABC" checked/>
+                            <label for="radio1.1">A, B, C</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio2" id="radio2.2" value="BAC" />
+                            <label for="radio2.2">B, A, C</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio2" id="radio3.3" value="CAB" />
+                            <label for="radio3.3">C, A, B</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio2" id="radio4.4" value="CBA" />
+                            <label for="radio4.4">C, B, A</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+
+                    <p>4) The language which is understood by the computer is:</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio3" id="radio1.11" value="arabic" checked />
+                            <label for="radio1.11">Arabic</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio3" id="radio2.22" value="machine" />
+                            <label for="radio2.22">Machine Code (Binary)</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio3" id="radio3.33" value="englich" />
+                            <label for="radio3.33">English</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio3" id="radio4.44" value="assembly" />
+                            <label for="radio4.44">Assembly</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+                    <p>5) Imagine writing a program that instructs a bird how to take off, fly, and land. What function is likely to be looped?</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio4" id="radi1.11" value="lift off" checked />
+                            <label for="radi1.11">Lift off</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio4" id="radi2.22" value="Flap wings" />
+                            <label for="radi2.22">Flap wings</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio4" id="radi3.33" value="Find landing spot" />
+                            <label for="radi3.33">Find landing spot</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio4" id="radi4.44" value="land" />
+                            <label for="radi4.44">Land</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+
+                    <p>6) If you needed to execute some code repeatedly based on a certain condition, which of the following would you use:</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio5" id="rad1.11" value="loop" checked/>
+                            <label for="rad1.11">Loop</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio5" id="rad2.22" value="variable" />
+                            <label for="rad2.22">Variable</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio5" id="rad3.33" value="conditional" />
+                            <label for="rad3.33">Conditional</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio5" id="rad4.44" value="compiler" />
+                            <label for="rad4.44">Compiler</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+
+                    <p>7) For a chef, what is the most important variable in preparing a meal for a dinner party?</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio6" id="ra1.11" value="The time of the party" checked />
+                            <label for="ra1.11">The time of the party</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio6" id="ra2.22" value="The distance to the grocery store" />
+                            <label for="ra2.22">The distance to the grocery store</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio6" id="ra3.33" value="The brand of your stove" />
+                            <label for="ra3.33">The brand of your stove</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio6" id="ra4.44" value="The number of guests" />
+                            <label for="ra4.44">The number of guests</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+
+                    <p>8) Which language can be directly understood by the CPU?</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio7" id="r1.11" value="1.	Assembly language" checked />
+                            <label for="r1.11">Assembly language</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio7" id="r2.22" value="Java" />
+                            <label for="r2.22">Java</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio7" id="r3.33" value="C" />
+                            <label for="r3.33">C</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio7" id="r4.44" value="All of the above" />
+                            <label for="r4.44">All of the above</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+
+                    <p>9) What type of languages can easily interact with the hardware?</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio8" id="y1.11" value="Very high languages" checked />
+                            <label for="y1.11">Very high languages</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio8" id="y2.22" value="Middle level languages" />
+                            <label for="y2.22">Middle level languages</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio8" id="y3.33" value="High level languages" />
+                            <label for="y3.33">High level languages</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio8" id="y4.44" value="Low level languages" />
+                            <label for="y4.44">Low level languages</label>
+                        </div>
+                        <!--
+        <div class="funkyradio-warning">
+            <input type="radio" name="radio" id="radio5" />
+            <label for="radio5">Fifth Option warning</label>
+        </div>
+        <div class="funkyradio-info">
+            <input type="radio" name="radio" id="radio6" />
+            <label for="radio6">Sixth Option info</label>
+        </div>
+-->
+                    </div>
+
+
+                    <p>10) Which of the following is NOT a web programming language?</p>
+
+                    <div class="funkyradio">
+                        <div class="funkyradio-default">
+                            <input type="radio" name="radio9" id="z1.11" value="Javascript" checked />
+                            <label for="z1.11">Javascript</label>
+                        </div>
+                        <div class="funkyradio-primary">
+                            <input type="radio" name="radio9" id="z2.22" value="html" />
+                            <label for="z2.22">HTML</label>
+                        </div>
+                        <div class="funkyradio-success">
+                            <input type="radio" name="radio9" id="z3.33" value="php" />
+                            <label for="z3.33">PHP</label>
+                        </div>
+                        <div class="funkyradio-danger">
+                            <input type="radio" name="radio9" id="z4.44" value="C++" />
+                            <label for="z4.44">C++</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+
+
+
+            <div class="new nnew seven">
+
+                <p class="">تعليقاتك ...</p>
+                <textarea id="comment" class="TextArea projectIdea"></textarea>
+                <br><br>
+                <center> <input type="button" name="Submit" id="Submit" onclick="postContactToGoogle()" value="إرسال" class="butt five" />
+                </center>
+                <br>
+
+            </div>
+
+        </form>
+    </section>
+
+
+
+
+
+    <footer>Copyright &copy; 2017 AZEX </footer>
+
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
